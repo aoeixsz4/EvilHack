@@ -1,5 +1,6 @@
 /* NetHack 3.6	mondata.h	$NHDT-Date: 1576626512 2019/12/17 23:48:32 $  $NHDT-Branch: NetHack-3.6 $:$NHDT-Revision: 1.39 $ */
 /* Copyright (c) 1989 Mike Threepoint				  */
+/* Copyright (c) Joanna Janet Zaitseva-Doyle <jjadoyle@gmail.com>, 2020 (doggo hats patch) */
 /* NetHack may be freely redistributed.  See license for details. */
 
 #ifndef MONDATA_H
@@ -227,6 +228,8 @@
                                || (ptr)->mlet == S_MUMMY || is_zombie(ptr)                          \
                                || (ptr) == &mons[PM_BARROW_WIGHT] || (ptr) == &mons[PM_GREEN_SLIME] \
                                || (ptr) == &mons[PM_MIND_FLAYER] || (ptr) == &mons[PM_REVENANT])
+#define is_doggo(ptr) ((ptr) == &mons[PM_LITTLE_DOG] || (ptr) == &mons[PM_DOG] \
+                               || (ptr) == &mons[PM_LARGE_DOG])
 #define is_domestic(ptr) (((ptr)->mflags2 & M2_DOMESTIC) != 0L)
 #define is_demon(ptr) (((ptr)->mhflags & MH_DEMON) != 0L)
 #define is_dragon(ptr) (((ptr)->mhflags & MH_DRAGON) != 0L)
