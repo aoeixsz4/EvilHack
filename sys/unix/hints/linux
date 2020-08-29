@@ -9,12 +9,12 @@
 # for Ubuntu dapper.
 
 
-#PREFIX=/usr
-PREFIX=$(wildcard ~)/eh/install
+PREFIX=/usr
+#PREFIX=$(wildcard ~)/eh/install
 HACKDIR=$(PREFIX)/games/lib/$(GAME)dir
 SHELLDIR = $(PREFIX)/games
 INSTDIR=$(HACKDIR)
-VARDIR = $(HACKDIR)
+VARDIR = $(HACKDIR)/var
 
 
 
@@ -53,6 +53,9 @@ WINTTYLIB=-lncurses -ltinfo
 
 CHOWN=true
 CHGRP=true
+
+GAMEUID=games
+GAMEGRP=games
 
 VARDIRPERM = 0755
 VARFILEPERM = 0600
